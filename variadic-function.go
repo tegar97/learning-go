@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 /*
 										Variadic Function
 	* Parameter yang berada di posisi terakhir , memiliki kemampuan dijadikan sebuah varags
@@ -22,4 +24,8 @@ func sumAll(numbers ...int) int {
 func main() {
 	total := sumAll(20, 30, 40, 50)
 	println(total)
+
+	slice := []int{10, 20, 30, 40}
+	total = sumAll(slice...)
+	fmt.Println(total)
 }
